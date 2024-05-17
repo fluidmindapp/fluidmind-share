@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            // Determine the device's operating system based on the user agent
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Redirect based on whether the device is iOS or Android
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://en.wikipedia.org/wiki/IOS";
+            } else if (/android/i.test(userAgent)) {
+                window.location.href = "https://en.wikipedia.org/wiki/Android_(operating_system)";
+            } else {
+                // Optionally handle other devices or provide a default redirection
+                window.location.href = "https://en.wikipedia.org";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>If you are not redirected, <a href="https://en.wikipedia.org">click here</a> to visit Wikipedia.</p>
+</body>
+</html>
