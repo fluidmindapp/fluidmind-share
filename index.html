@@ -20,12 +20,12 @@
 
             // Redirect based on whether the device is iOS or Android
             if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                window.location.href = "https://en.wikipedia.org/wiki/IOS";
+                window.location.href = "https://apps.apple.com/app/fluidmind/id6503635625";
             } else if (/android/i.test(userAgent)) {
-                window.location.href = "https://en.wikipedia.org/wiki/Android_(operating_system)";
+                window.location.href = "https://play.google.com/store/apps/details?id=com.euthymiatechnologies.fluidmind";
             } else {
                 // Optionally handle other devices or provide a default redirection
-                window.location.href = "https://en.wikipedia.org";
+                window.location.href = "https://euthymiatechnologies.com";
             }
         }
     </script>
